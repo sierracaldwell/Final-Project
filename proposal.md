@@ -13,10 +13,10 @@ I will create a short visual novel. This is relevant to digital arts & media bec
 - Feature 2
 	- Multiple endings: have 2 ending
 - Feature 3 
-	- Branching dialgue choices: player choice impacts plot
+	- Branching dialogue choices: player choice impacts plot
 
 ## Challenges
-- For clickable objects I need to leaern the concepts: clickable areas, event handling, hotspots, and conditionals
+- For clickable objects I need to learn the concepts: clickable areas, event handling, hotspots, and conditionals
 - I will need to learn branching logic to create 2 different endings
 - For branching dialogue choices I need to focus on dialogue trees, branching paths, variables, and conditionals (if/else)
 

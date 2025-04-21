@@ -1,11 +1,11 @@
 ## Title
-Untitled(W.I.P.)
+Sunborne
 
 ## Repository
 https://github.com/sierracaldwell/Final-Project.git
 
 ## Description
-I will create a short visual novel. This is relevant to digital arts & media because it's a form of visual storytelling that requires programming to be made. 
+I will create a short visual novel. This is relevant to digital arts & media because it's a form of visual storytelling that requires programming to be made. Logline: Children born after a mysterious solar storm all suffer from minor retinal burns. As they grow up, they begin to see “threads” connecting people. Some begin pulling them.
 
 ## Features
 - Feature 1

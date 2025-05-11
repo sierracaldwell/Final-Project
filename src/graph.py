@@ -1,7 +1,8 @@
 class DialogChoice:
-    def __init__(self, text, next_node_id):
+    def __init__(self, text, next_node_id, image_path=None):
         self.text = text
         self.next_node_id = next_node_id
+        self.image_path = image_path  # Optional path to image
 
 class DialogNode:
     def __init__(self, node_id, text, choices):

@@ -8,7 +8,7 @@ pygame.init()
 # Screen setup
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Visual Novel")
+pygame.display.set_caption("Sunborne")
 
 # Colors and fonts
 BLACK = (0, 0, 0)
@@ -31,7 +31,7 @@ def draw_text_box(text, y_start, width):
 def draw_choices(choices, y_start, selected_button=None):
     buttons = []
     for i, choice in enumerate(choices):
-        rect = pygame.Rect(40, y_start + i * 60, 700, 45)
+        rect = pygame.Rect(40, y_start + i * 100, 700, 90)
         buttons.append((rect, choice.text))
 
         # Button fill color
@@ -39,13 +39,23 @@ def draw_choices(choices, y_start, selected_button=None):
 
         # Draw button background
         pygame.draw.rect(screen, fill_color, rect)
-
-        # Draw border
         pygame.draw.rect(screen, WHITE, rect, 2)
+
+        # Draw image if it exists
+        if choice.image_path:
+            try:
+                image = pygame.image.load(choice.image_path)
+                image = pygame.transform.scale(image, (80, 80))  # Resize if needed
+                screen.blit(image, (rect.x + 10, rect.y + 5))
+                text_offset = 100  # Shift text to the right of image
+            except pygame.error:
+                text_offset = 10  # If loading fails, fallback to normal text position
+        else:
+            text_offset = 10
 
         # Draw text
         label = FONT.render(choice.text, True, WHITE)
-        screen.blit(label, (rect.x + 10, rect.y + 10))
+        screen.blit(label, (rect.x + text_offset, rect.y + 30))
 
     return buttons
 
@@ -61,8 +71,8 @@ def main():
         root_node_id="START",
         nodes=[
             DialogNode("START", "You're in a dimly lit room. There are two doors...", [
-                DialogChoice("Exit west", "WEST"),
-                DialogChoice("Exit east", "EAST")
+                DialogChoice("Exit west", "WEST", "assets/west_door.png"),
+                DialogChoice("Exit east", "EAST", "assets/east_door.png")
             ]),
             DialogNode("WEST", "You're in a library. Nothing of interest.", [
                 DialogChoice("Leave the library", "START")

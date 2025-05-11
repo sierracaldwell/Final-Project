@@ -5,7 +5,7 @@ Sunborne
 https://github.com/sierracaldwell/Final-Project.git
 
 ## Description
-I will create a short visual novel. This is relevant to digital arts & media because it's a form of visual storytelling that requires programming to be made. Logline: Children born after a mysterious solar storm all suffer from minor retinal burns. As they grow up, they begin to see “threads” connecting people. Some begin pulling them.
+I will create a short visual novel. This is relevant to digital arts & media because it's a form of visual storytelling that requires programming to be made.
 
 ## Features
 - Feature 1
@@ -13,7 +13,7 @@ I will create a short visual novel. This is relevant to digital arts & media bec
 - Feature 2
 	- Multiple endings: have 2 ending
 - Feature 3 
-	- Branching dialogue choices: player choice impacts plot
+	- Branching dialogue choices: player choice impacts ending
 
 ## Challenges
 - For clickable objects I need to learn the concepts: clickable areas, event handling, hotspots, and conditionals

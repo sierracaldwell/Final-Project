@@ -10,4 +10,4 @@ Demo Video: <URL>
 GitHub Repo: <URL>
 
 ## Description
-A short visual novel about a vigalante getting home after a long day out.
+A short visual novel about 

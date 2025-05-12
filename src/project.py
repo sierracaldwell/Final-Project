@@ -8,7 +8,7 @@ pygame.init()
 # Screen setup
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Sunborne")
+pygame.display.set_caption("Pumpkin")
 
 # Colors and fonts
 BLACK = (0, 0, 0)
@@ -70,29 +70,30 @@ def main():
     dialog_graph = DialogGraph(
         root_node_id="START",
         nodes=[
-            DialogNode("START", "You're in a dimly lit room. There are two doors...", [
-                DialogChoice("Exit west", "WEST", "assets/west_door.png"),
-                DialogChoice("Exit east", "EAST", "assets/east_door.png")
+            DialogNode("START", "You just got home after class. You start to walk to your bedroom...", [
+                DialogChoice("Enter the room", "BEDROOM", "assets/west_door.png"),
+                DialogChoice("Call out for your cat", "APARTMENT", "assets/east_door.png")
             ]),
-            DialogNode("WEST", "You're in a library. Nothing of interest.", [
-                DialogChoice("Leave the library", "START")
+            DialogNode("APARTMENT", "No response. Everything is quiet", [
+                DialogChoice("Enter the room", "BEDROOM")
             ]),
-            DialogNode("EAST", "You're in a corridor. There's a hole!", [
-                DialogChoice("Go back", "START"),
-                DialogChoice("Jump in", "BASEMENT")
+            DialogNode("BEDROOM", "Your room is clean, aside from the coffee cups and miscellaneous papers cluttering the desk", [
+                DialogChoice("Look under the bed", "CAT_FOUND"),
+                DialogChoice("Check the window sill", "WINDOW")
             ]),
-            DialogNode("BASEMENT", "You fall hard into a dark cellar.", [
-                DialogChoice("Sit and wait", "SUNLIGHT"),
-                DialogChoice("Feel your way", "SPEAR")
+            DialogNode("WINDOW", "You walk over to the window sill. The sunlight is warm, but nothing's there", [
+                DialogChoice("Look under the bed", "CAT_FOUND"),
+                DialogChoice("Leave the room", "START")
             ]),
-            DialogNode("SUNLIGHT", "Light enters. You see spears. Lucky you waited!", [
-                DialogChoice("Leave", "VICTORY")
+            DialogNode("CAT_FOUND", "You peek under the bed and find a sleepy orange cat staring back at you!", [
+                DialogChoice("Have a staring contest", "NUETRAL_END"),
+                DialogChoice("Sit and pet the cat", "HAPPY_END")
             ]),
-            DialogNode("SPEAR", "You walk into a spear. You are dead.", [
-                DialogChoice("Retry", "START"),
+            DialogNode("NUETRAL_END", "The cat stares at you with wide, unblinking eyes. The room feels colder now. You slowly back away, unsure why you feel watched, even after you leave.", [
+                DialogChoice("Start over", "START"),
                 DialogChoice("Exit", "EXIT")
-            ]),
-            DialogNode("VICTORY", "You escaped!", [
+            ]),     
+            DialogNode("HAPPY_END", "You sit quietly, petting Pumpkin as she purrs happily. A perfect moment.", [
                 DialogChoice("Start again", "START"),
                 DialogChoice("Exit", "EXIT")
             ]),

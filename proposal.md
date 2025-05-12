@@ -1,5 +1,5 @@
 ## Title
-Sunborne
+Pumpkin
 
 ## Repository
 https://github.com/sierracaldwell/Final-Project.git
@@ -9,14 +9,14 @@ I will create a short visual novel. This is relevant to digital arts & media bec
 
 ## Features
 - Feature 1
-	- Clickable objects: things you can click on for additional information, likely in the form of an internal monologue, example: you click on a book, and you get a little bit of insight into what it's about and what the character thinks about it.
+	- Looping/Replayability
 - Feature 2
 	- Multiple endings: have 2 ending
 - Feature 3 
 	- Branching dialogue choices: player choice impacts ending
 
 ## Challenges
-- For clickable objects I need to learn the concepts: clickable areas, event handling, hotspots, and conditionals
+- I will have to make sure to have a structure and game loop logic
 - I will need to learn branching logic to create 2 different endings
 - For branching dialogue choices I need to focus on dialogue trees, branching paths, variables, and conditionals (if/else)
 

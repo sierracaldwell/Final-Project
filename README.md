@@ -1,7 +1,7 @@
 # Final-Project
 
 # PROJECT TITLE
-Sunborne
+Pumpkin
 
 ## Demo
 Demo Video: <URL>
@@ -10,4 +10,4 @@ Demo Video: <URL>
 GitHub Repo: <URL>
 
 ## Description
-A short visual novel about 
+A short visual novel about finding your pet cat.

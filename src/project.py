@@ -8,6 +8,7 @@ pygame.init()
 image_cache = {
     "WINDOW": pygame.image.load("assets/window.png"),
     "START": pygame.image.load("assets/apartment.png"),
+    "APARTMENT": pygame.image.load("assets/apartment.png"),
     "BEDROOM": pygame.image.load("assets/bedroom.png"),
     "CAT_FOUND": pygame.image.load("assets/sleepy_cat.png"),
     "NUETRAL_END": pygame.image.load("assets/stare.png"),
@@ -75,8 +76,8 @@ def render_node(node, selected_button=None):
     # === Draw image from cache if node ID has one ===
     if node.node_id in image_cache:
         image = image_cache[node.node_id]
-        image = pygame.transform.scale(image, (WIDTH - 200, 200))  # Resize as needed
-        screen.blit(image, ((WIDTH - 200) // 2, y))
+        image = pygame.transform.scale(image, (WIDTH - 300, 300))  # Resize as needed
+        screen.blit(image, ((WIDTH - 300) // 2, y))
         y += image.get_height() + 20
 
     # === Draw dialog text ===

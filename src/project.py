@@ -5,6 +5,15 @@ from text_util import layout_text_in_area
 
 pygame.init()
 
+image_cache = {
+    "WINDOW": pygame.image.load("assets/window.png"),
+    "START": pygame.image.load("assets/apartment.png"),
+    "BEDROOM": pygame.image.load("assets/bedroom.png"),
+    "CAT_FOUND": pygame.image.load("assets/sleepy_cat.png"),
+    "NUETRAL_END": pygame.image.load("assets/stare.png"),
+    "HAPPY_END": pygame.image.load("assets/pet_cat.png")
+}
+
 # Screen setup
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -61,8 +70,21 @@ def draw_choices(choices, y_start, selected_button=None):
 
 def render_node(node, selected_button=None):
     screen.fill(BLACK)
-    y = draw_text_box(node.text, 40, WIDTH - 80)
+    y = 20
+
+    # === Draw image from cache if node ID has one ===
+    if node.node_id in image_cache:
+        image = image_cache[node.node_id]
+        image = pygame.transform.scale(image, (WIDTH - 200, 200))  # Resize as needed
+        screen.blit(image, ((WIDTH - 200) // 2, y))
+        y += image.get_height() + 20
+
+    # === Draw dialog text ===
+    y = draw_text_box(node.text, y, WIDTH - 80)
+
+    # === Draw choices ===
     buttons = draw_choices(node.choices, y + 20, selected_button)
+
     pygame.display.flip()
     return buttons
 
@@ -85,7 +107,7 @@ def main():
                 DialogChoice("Look under the bed", "CAT_FOUND"),
                 DialogChoice("Leave the room", "START")
             ]),
-            DialogNode("CAT_FOUND", "You peek under the bed and find a sleepy orange cat staring back at you!", [
+            DialogNode("CAT_FOUND", "You peek under the bed and find a sleepy cat staring back at you!", [
                 DialogChoice("Have a staring contest", "NUETRAL_END"),
                 DialogChoice("Sit and pet the cat", "HAPPY_END")
             ]),

@@ -5,10 +5,11 @@ class DialogChoice:
         self.image_path = image_path  # Optional path to image
 
 class DialogNode:
-    def __init__(self, node_id, text, choices):
+    def __init__(self, node_id, text, choices, image_path=None):
         self.node_id = node_id
         self.text = text
         self.choices = choices
+        self.image_path = image_path
 
 class DialogGraph:
     def __init__(self, root_node_id, nodes):

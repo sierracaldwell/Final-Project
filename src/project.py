@@ -71,8 +71,8 @@ def main():
         root_node_id="START",
         nodes=[
             DialogNode("START", "You just got home after class. You start to walk to your bedroom...", [
-                DialogChoice("Enter the room", "BEDROOM", "assets/west_door.png"),
-                DialogChoice("Call out for your cat", "APARTMENT", "assets/east_door.png")
+                DialogChoice("Enter the room", "BEDROOM"),
+                DialogChoice("Call out for your cat", "APARTMENT")
             ]),
             DialogNode("APARTMENT", "No response. Everything is quiet", [
                 DialogChoice("Enter the room", "BEDROOM")

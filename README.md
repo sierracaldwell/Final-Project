@@ -7,7 +7,7 @@ Pumpkin
 Demo Video: <URL>
 
 ## GitHub Repository
-GitHub Repo: <URL>
+GitHub Repo: <https://github.com/sierracaldwell/Final-Project>
 
 ## Description
 A short visual novel about finding your pet cat.

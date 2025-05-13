@@ -4,7 +4,7 @@
 Pumpkin
 
 ## Demo
-Demo Video: <URL>
+Demo Video: <https://youtu.be/OM4KIMDk-gA>
 
 ## GitHub Repository
 GitHub Repo: <https://github.com/sierracaldwell/Final-Project>
